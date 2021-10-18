@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>FIREBASE DESIGN</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>CREATE NOTE</h2>
+            <form class="create_note_form">
+            <label for="notetitle">Note title </label> <br>
+            <input type="text" id="notetitle" class="notetitle"> <br> <br>
+
+            <label for="notetxt">Note </label> <br>
+            <input type="text" id="notetxt"> <br><br>
+
+            <label for="checkbox">Mark as important </label>
+            <input type="checkbox" class="cb_create" id="cb_create"> <br> <br>
+
+            <button class="submit">Submit note</button> <br>
+            </form>
+            <br>
+            <br>
+
+            <h2>SEARCH</h2>
+            <form class="search-note-form">
+            <label for="search_input">Search for note </label> <br>
+            <input type="text" class="search_input"> <br> <br>
+
+            <label for="checkbox-search">Marked as important </label>
+            <input type="checkbox" class="checkbox_search" id="checkbox_search"> <br> <br>
+            <button class="search">Search</button>
+            </form>
+          </div>
+          <div class="col">
+
+            <div class="displaynotes">
+
+            </div>
+
+          </div>
+        </div>
+    </div>
+    
+<!--FIREBASE--> 
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+<script>
+  // Import the functions you need from the SDKs you need
+  // The import doesn't work so i used a script tag with source instead and changed the version
+  // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+  // import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+
+  // Your web app's Firebase configuration
+    const firebaseConfig = {
+    apiKey: "AIzaSyCBTmDfrihEtfem1rPJZMK0HIDnzvMDD9A",
+    authDomain: "ninjafirebaseproject.firebaseapp.com",
+    projectId: "ninjafirebaseproject",
+    storageBucket: "ninjafirebaseproject.appspot.com",
+    messagingSenderId: "62605908437",
+    appId: "1:62605908437:web:ee15488ee69b1c1290c55c"
+    };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();      
+</script>  
+</body>
+</html>
